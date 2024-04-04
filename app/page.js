@@ -69,13 +69,13 @@ function ClipboardReader() {
           </div>
           <div>
             <h3>分开的，2-6 然后是7-11:</h3>
-            <div>
+            <div className="mb-4">
               <button
                   className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300"
                   onClick={() => handleCopyToClipboard(groupedMatchingSubstringsLocal[0].join(', '))}>{groupedMatchingSubstringsLocal[0].join(', ')}</button>
             </div>
 
-            <div>
+            <div className="mb-4">
               <button
                   className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300"
                   onClick={() => handleCopyToClipboard(groupedMatchingSubstringsLocal[1].join(', '))}>{groupedMatchingSubstringsLocal[1].join(', ')}</button>
@@ -94,13 +94,13 @@ function ClipboardReader() {
           </div>
           <div>
             <h3>分开的，2-6 然后是7-10:</h3>
-            <div>
+            <div className="mb-4">
               <button
                   className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300"
                   onClick={() => handleCopyToClipboard(groupedMatchingSubstringsRemote[0].join(', '))}>{groupedMatchingSubstringsRemote[0].join(', ')}</button>
             </div>
 
-            <div>
+            <div className="mb-4">
               <button
                   className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300"
                   onClick={() => handleCopyToClipboard(groupedMatchingSubstringsRemote[1].join(', '))}>{groupedMatchingSubstringsRemote[1].join(', ')}</button>
