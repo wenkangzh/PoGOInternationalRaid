@@ -8,7 +8,7 @@ export default function Home() {
     <ClipboardReader>Test</ClipboardReader>
     </main>
   );
-}
+
 
 function ClipboardReader() {
   const [buttonText, setButtonText] = useState('按这儿！');
