@@ -11,7 +11,7 @@ export default function Home() {
 }
 
 function ClipboardReader() {
-  const [buttonText, setButtonText] = useState('Click to Read Clipboard');
+  const [buttonText, setButtonText] = useState('按这儿！');
   const [matchingSubstrings, setMatchingSubstrings] = useState([]);
   const [groupedMatchingSubstrings, setGroupedMatchingSubstrings] = useState([[], []]);
 
@@ -52,14 +52,15 @@ function ClipboardReader() {
       <div>
         <button className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300" onClick={handleClick}>{buttonText}</button>
         <div>
-          <h3>Matching Substrings:</h3>
+          <h3>一次性复制所有（只包括接龙2-11）:</h3>
           <button className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300" onClick={() => handleCopyToClipboard(matchingSubstrings)}>{matchingSubstrings}</button>
         </div>
         <div>
-          <h3>Grouped Matching Substrings:</h3>
+          <h3>分开的，2-6 然后是7-11:</h3>
           <div>
             <button className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300" onClick={() => handleCopyToClipboard(groupedMatchingSubstrings[0].join(', '))}>{groupedMatchingSubstrings[0].join(', ')}</button>
           </div>
+
           <div>
             <button className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300" onClick={() => handleCopyToClipboard(groupedMatchingSubstrings[1].join(', '))}>{groupedMatchingSubstrings[1].join(', ')}</button>
           </div>
