@@ -24,11 +24,11 @@ function ClipboardReader() {
       const regex = /\. ([a-zA-Z0-9]+)/g;
       const matches = clipboardContent.match(regex);
       if (matches) {
-        setMatchingSubstrings(matches.map(match => match.substring(2)).join(', ')); // Exclude ". " from matched substrings and join them with commas
+        setMatchingSubstrings(matches.slice(1, 11).map(match => match.substring(2)).join(', ')); // Exclude ". " from matched substrings and join them with commas
 
         // Convert matching substrings into two sets of strings each with 5 results
-        const firstSet = matches.slice(0, 5).map(match => match.substring(2)); // Exclude ". " from matched substrings
-        const secondSet = matches.slice(5, 10).map(match => match.substring(2)); // Exclude ". " from matched substrings
+        const firstSet = matches.slice(1, 6).map(match => match.substring(2)); // Exclude ". " from matched substrings
+        const secondSet = matches.slice(6, 11).map(match => match.substring(2)); // Exclude ". " from matched substrings
         setGroupedMatchingSubstrings([firstSet, secondSet]);
       } else {
         setMatchingSubstrings([]);
