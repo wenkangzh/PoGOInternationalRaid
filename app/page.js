@@ -8,6 +8,7 @@ export default function Home() {
     <ClipboardReader>Test</ClipboardReader>
     </main>
   );
+}
 
 
 function ClipboardReader() {
