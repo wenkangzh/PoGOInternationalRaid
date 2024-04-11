@@ -60,7 +60,7 @@ function ClipboardReader() {
         <button
             className="bg-blue-500 text-white border border-blue-500 px-4 py-2 rounded-md transition duration-300 hover:bg-blue-300 mb-4"
             onClick={handleClick}>{buttonText}</button>
-        <div className="rounded-lg border border-green-500 text-cyan-500 p-4 shadow-md mb-4">
+        {buttonText !== "按这儿！" && (<div className="rounded-lg border border-green-500 text-cyan-500 p-4 shadow-md mb-4">
           <h3>如果你是<span className="inline underline font-bold">近程票</span>：</h3>
           <div>
             <h3>一次性复制所有（只包括接龙2-11）:</h3>
@@ -82,10 +82,10 @@ function ClipboardReader() {
                   onClick={() => handleCopyToClipboard(groupedMatchingSubstringsLocal[1].join(', '))}>{groupedMatchingSubstringsLocal[1].join(', ')}</button>
             </div>
           </div>
-        </div>
+        </div>)}
 
         <hr className="border-t border-gray-500 mb-4" />
-        <div className="rounded-lg border border-cyan-500 text-cyan-500 p-4 shadow-md">
+        {buttonText !== "按这儿！" && (<div className="rounded-lg border border-cyan-500 text-cyan-500 p-4 shadow-md">
           <h3>如果你是<span className="inline underline font-bold">远程票！</span>：</h3>
           <div>
             <h3>一次性复制所有（只包括接龙2-10）:</h3>
@@ -107,7 +107,7 @@ function ClipboardReader() {
                   onClick={() => handleCopyToClipboard(groupedMatchingSubstringsRemote[1].join(', '))}>{groupedMatchingSubstringsRemote[1].join(', ')}</button>
             </div>
           </div>
-        </div>
+        </div>)}
       </div>
   );
 }
